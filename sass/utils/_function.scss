@@ -1,0 +1,4 @@
+@function light-clr ($clr) {
+    $clr: lighten($clr, 10);
+    @return $clr;
+}

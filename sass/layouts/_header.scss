@@ -1,0 +1,11 @@
+.header-block {
+    width: 100%;
+    box-shadow: 0px 2px 2px $color-shadow;
+    text-align: center;
+    z-index: 1;
+    &__logo {
+        width: 50vw;
+        height: auto;
+        padding: 1rem 0;
+    }
+}
