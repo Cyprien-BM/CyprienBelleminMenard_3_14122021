@@ -15,8 +15,23 @@ html {
   align-items: center;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .btn-primary {
@@ -69,16 +84,13 @@ h1 {
   text-align: center;
   z-index: 1;
 }
-.header-block__logo {
-  width: 50vw;
-  height: auto;
-  padding: 1rem 0;
+.header-block a {
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
 }
 
 .nav-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
 }
@@ -96,7 +108,6 @@ h1 {
 }
 
 .nav-block-index {
-  width: 100%;
   padding: 3rem;
   background-color: #f6f6f6;
 }
@@ -107,6 +118,101 @@ h1 {
   margin-top: 0.7rem;
   margin-bottom: 1.7rem;
   font-weight: 300;
+}
+
+.fonctionnement-section {
+  padding: 3rem 1.5rem;
+  row-gap: 1.5rem;
+}
+.fonctionnement-section h3 {
+  margin-bottom: 0.5rem;
+}
+.fonctionnement-section__card {
+  background-color: #f6f6f6;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0.3rem 1rem #bdbdbd;
+}
+.fonctionnement-section__card span {
+  display: block;
+}
+.fonctionnement-section__card .card__number {
+  color: white;
+  background-color: #9356dc;
+  width: 1.3rem;
+  height: 1.3rem;
+  padding-top: 0.1rem;
+  border-radius: 100%;
+  text-align: center;
+  position: absolute;
+  left: -0.65rem;
+}
+.fonctionnement-section__card .card__logo {
+  color: #7e7e7e;
+  position: absolute;
+  left: 12%;
+}
+.fonctionnement-section__card .card__txt {
+  font-weight: bold;
+}
+
+.restaurants-section {
+  padding: 3rem 1.5rem;
+  background-color: #f6f6f6;
+  row-gap: 1.5rem;
+}
+.restaurants-section a {
+  display: block;
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+}
+.restaurants-section a img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.restaurants-section a figcaption {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurants-section a figcaption p {
+  font-weight: 300;
+}
+.restaurants-section a figcaption .full {
+  transition: opacity 250ms ease-in-out;
+  opacity: 0;
+}
+.restaurants-section a figcaption .empty {
+  transition: opacity 250ms ease-in-out;
+}
+.restaurants-section a figcaption .heart:hover .full {
+  opacity: 1;
+  background: #4a4a9e;
+  background: linear-gradient(201deg, #4a4a9e 0%, #9356dc 31%, #ff79da 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants-section a figcaption .heart:hover .empty {
+  opacity: 0;
+}
+.restaurants-section a .card__new-tag {
+  display: inline-block;
+  background-color: #99e2d0;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #278870;
+  position: absolute;
+  top: 5%;
+  right: 5%;
 }
 
 /*# sourceMappingURL=style.css.map */
