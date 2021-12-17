@@ -83,12 +83,29 @@ a {
 .header-block {
   width: 100%;
   box-shadow: 0px 2px 2px #bdbdbd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   z-index: 1;
+  position: relative;
 }
 .header-block a {
+  position: absolute;
+  left: 5%;
+  transition: transform 350ms ease-in-out, backgroud-color 350ms ease-in-out;
+}
+.header-block a:hover {
+  transform: scale(1.5);
+  background: #4a4a9e;
+  background: linear-gradient(201deg, #4a4a9e 0%, #9356dc 31%, #ff79da 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header-block h1 {
   display: inline-block;
-  font-size: 0.9rem;
+  font-size: 2rem;
+  font-weight: lighter;
   padding: 0.5rem 0;
 }
 
@@ -236,6 +253,12 @@ footer ul li span {
   transition: color 250ms linear;
 }
 
+.img-section img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+
 .nav-section {
   align-items: center;
   text-align: center;
@@ -289,6 +312,7 @@ footer ul li span {
   justify-content: center;
   position: relative;
   box-shadow: 0 0.3rem 1rem #bdbdbd;
+  transition: background-color 250ms;
 }
 .fonctionnement-section__card span {
   display: block;
@@ -308,6 +332,7 @@ footer ul li span {
   color: #7e7e7e;
   position: absolute;
   left: 12%;
+  transition: color 250ms;
 }
 .fonctionnement-section__card .card__txt {
   font-weight: bold;

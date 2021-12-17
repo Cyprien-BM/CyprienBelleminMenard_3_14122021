@@ -53,6 +53,7 @@
         justify-content: center;
         position: relative;
         box-shadow: 0 .3rem 1rem $color-shadow;
+        transition: background-color 250ms;
 
         span {
             display: block;
@@ -73,7 +74,8 @@
         .card__logo {
             color: $color-logo-card;
             position: absolute;
-            left: 12%
+            left: 12%;
+            transition: color 250ms;
         }
 
         .card__txt {
