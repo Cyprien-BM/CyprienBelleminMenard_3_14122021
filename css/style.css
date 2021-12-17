@@ -96,15 +96,26 @@ a {
 }
 
 .localisation-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 3rem;
   background-color: #eaeaea;
-  padding: 1rem 0;
   font-weight: 400;
   color: #353535;
+  position: relative;
 }
 .localisation-block__logo-pin {
-  position: relative;
-  right: 1rem;
+  position: absolute;
+  left: 30%;
+}
+.localisation-block input {
+  background: none;
+  border: none;
+  width: 99%;
+  height: 90%;
+  text-align: center;
 }
 
 .nav-block-index {
@@ -159,6 +170,12 @@ a {
 .fonctionnement-section__card .card__txt {
   font-weight: bold;
 }
+.fonctionnement-section__card:hover {
+  background-color: #f5edff;
+}
+.fonctionnement-section__card:hover .card__logo {
+  color: #9356dc;
+}
 
 .restaurants-section {
   padding: 3rem 1.5rem;
@@ -170,6 +187,11 @@ a {
   background-color: white;
   border-radius: 1rem;
   position: relative;
+  box-shadow: 0 0.5rem 0.5rem #bdbdbd;
+  transition: transform 250ms ease-in-out;
+}
+.restaurants-section a:hover {
+  transform: scale(1.03);
 }
 .restaurants-section a img {
   width: 100%;
