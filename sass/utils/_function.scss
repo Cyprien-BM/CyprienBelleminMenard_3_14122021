@@ -1,4 +1,4 @@
-@function light-clr ($clr) {
-    $clr: lighten($clr, 10);
+@function light-clr ($clr, $percent) {
+    $clr: lighten($clr, $percent);
     @return $clr;
 }

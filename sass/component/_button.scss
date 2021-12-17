@@ -20,8 +20,8 @@
         right: 0;
         bottom: 0;
         border-radius: 1.5rem;
-        background: light-clr($color-primary);
-        background: linear-gradient(355deg, light-clr(rgba(74,74,158,1)) 0%, light-clr(rgba(147,86,220,1)) 10%, light-clr(rgba(255,121,218,1)) 100%);
+        background: light-clr($color-primary, 10);
+        background: linear-gradient(355deg, light-clr(rgba(74,74,158,1), 10) 0%, light-clr(rgba(147,86,220,1), 10) 10%, light-clr(rgba(255,121,218,1), 10) 100%,);
         opacity: 0;
         transition: opacity 250ms;
         z-index: -1;

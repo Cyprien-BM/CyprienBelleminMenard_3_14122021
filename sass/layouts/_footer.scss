@@ -1,0 +1,146 @@
+@mixin bg-footer-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: opacity 250ms linear;
+}
+
+@mixin clr-bg-footer-link {
+    background: light-clr(rgb(74,74,158),10);
+    background: linear-gradient(201deg, light-clr(rgba(74,74,158,1), 10) 0%, light-clr(rgba(147,86,220,1), 5) 31%, light-clr(rgba(255,121,218,1), 5) 100%);
+    background-clip: text;
+}
+
+
+
+$nlink: 5;
+
+footer {
+    width: 100%;
+    background-color: $color-bg-dark;
+    color: white;
+    transition: color 250ms linear;
+    padding: 1.5rem 1.5rem;
+
+    li {
+        &:hover {
+            
+            span {
+                color: $color-secondary;
+            }
+            
+            .link {
+                color: transparent;
+                @for $i from 2 through $nlink {
+                    &.n--#{$i} {
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        span::after {
+            content:"";
+            @include bg-footer-link;
+            background-color: $color-secondary;
+            background-clip: text;
+        }
+
+    }
+
+    .link {
+        color: white;
+        position: relative;
+        transition: color 250ms linear;
+
+
+        &.n--1 {
+            &::after {
+                content:"ohmyfood";
+                @include bg-footer-link;
+                @include clr-bg-footer-link;
+                width: 110%;
+            }
+
+            &:hover {
+                color: transparent;
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+
+
+        &.n--2 {
+            &::after {
+                content:"Proposer un restaurant";
+                @include bg-footer-link;
+                @include clr-bg-footer-link;
+            }
+        }
+
+        &.n--3 {
+            &::after {
+                content:"Devenir partenaire";
+                @include bg-footer-link;
+                @include clr-bg-footer-link;
+            }
+        }
+
+        &.n--4 {
+            &::after {
+                content:"Mention légales";
+                @include bg-footer-link;
+                @include clr-bg-footer-link;
+            }
+        }
+
+        &.n--5 {
+            &::after {
+                content:"Contact";
+                @include bg-footer-link;
+                @include clr-bg-footer-link;
+            }
+        }
+    }
+
+    h6 {
+
+        padding-bottom: 1rem;
+    
+        a {
+            font-family: 'Shrikhand', cursive;
+            font-size: 1.2rem;
+            font-weight: lighter;
+        }
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            padding: .3rem 0;
+
+            i {
+                padding-right: .3rem;
+            }
+
+            span {
+                position: relative;
+                display: inline-block;
+                width: 1.3rem;
+                transition: color 250ms linear;
+            }
+        }
+
+
+
+    }
+}

@@ -13,15 +13,12 @@
     font-weight: 400;
     color: #353535;
     position: relative;
-    &__logo-pin {
-        position: absolute;
-        left: 30%;
-    }
+
     input {
         background: none;
         border: none;
-        width: 99%;
-        height: 90%;
+        width: 8rem;
+        height: 2rem;
         text-align: center;
     }
 }
