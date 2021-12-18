@@ -1,0 +1,82 @@
+.loading-section {
+    width: 100vw;
+    height: 100vh;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+    // span {
+    //     display: block;
+    //     font-family: 'Shrikhand', cursive;
+    //     font-size: 2.5rem;
+    //     padding: 0 .3rem;
+    //     font-weight: lighter;
+    // }
+}
+
+.loading-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.page-block.index {
+    opacity: 1;
+    animation: loading 1000ms ease-in-out;
+}
+
+$fall-duration: 3000ms;
+$n-letter: 8;
+$fall-delay: $fall-duration / $n-letter;
+
+.fall{
+    display: none;
+    // display: flex;
+    .letter {
+
+        animation: loading-fall $fall-duration forwards ease-in-out;
+
+        @for $i from 1 through $n-letter {
+            
+                &.fall-n#{$i} {
+                    position: relative;
+                    bottom: 100%;
+                    opacity: 0;
+                    animation-delay: $fall-delay * $i;
+                }
+        }
+    }
+}
+
+@keyframes loading-fall {
+    0% {
+
+    }
+
+    33% {
+        opacity: 1;
+        top: calc(50vh - 10.5rem);
+    }
+
+    49% {
+        top: calc(50vh - 1.5rem);
+    }
+
+    66% {
+        opacity: 1;
+        top: calc(50vh - 3.5rem);
+    }
+
+    82% {
+        top: calc(50vh - 1.5rem);
+    }
+
+    100% {
+        opacity: 1;
+        top: calc(50vh - 3.5rem);
+    }
+}
+

@@ -9,6 +9,7 @@
     border-radius: 1rem;
     overflow: hidden;
     position: relative;
+    box-shadow: .2rem .2rem .6rem $color-shadow;
 
     h5 {
         font-weight: 700;
@@ -79,5 +80,35 @@
         .dish-card__description {
            width: calc(90% - 4rem);
         }
+    }
+}
+
+$cards-dur: 1000ms;
+$cards-n: 13;
+$cards-delay: $cards-dur / $cards-n;
+
+.card-animation {
+    opacity: 0;
+    animation: cards 800ms forwards ease-in-out;
+
+    @for $i from 1 through $cards-n {
+        
+            &.n#{$i} {
+                animation-delay: $cards-delay * $i;
+            }
+
+        
+    }
+}
+
+@keyframes cards {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
