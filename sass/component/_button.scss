@@ -9,7 +9,7 @@
     box-shadow: .5rem .5rem 1rem $color-shadow;
     position: relative;
     overflow: hidden;
-    transition:  transform 250ms;
+    transition:  transform 350ms;
     z-index: 1;
     
     &::after {
@@ -23,13 +23,13 @@
         background: light-clr($color-primary, 10);
         background: linear-gradient(355deg, light-clr(rgba(74,74,158,1), 10) 0%, light-clr(rgba(147,86,220,1), 10) 10%, light-clr(rgba(255,121,218,1), 10) 100%,);
         opacity: 0;
-        transition: opacity 250ms;
+        transition: opacity 350ms;
         z-index: -1;
     }
 
     &:hover {
         transform: scale(1.05);
-        animation: darken-shadow 250ms forwards;
+        animation: darken-shadow 350ms forwards;
         &::after{
             opacity: 1;
         }

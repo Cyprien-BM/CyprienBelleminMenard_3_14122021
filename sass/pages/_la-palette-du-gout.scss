@@ -1,6 +1,6 @@
 .menu-section {
 
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
     border-radius: 2rem 2rem 0 0;
     background-color: $color-bg-medium;
     position: relative;
@@ -8,11 +8,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     
     header {
-
+        width: 100%;
         display: flex;
         justify-content: space-between;
+        padding-bottom: 2rem;
         
         h2 {
             font-family: 'Shrikhand', cursive;
@@ -22,4 +24,22 @@
         @include like-button;
     }
     
+    .dish-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+.pages-footer {
+    position: relative;
+    bottom: 2rem;
+}
+
+.btn-pages {
+    width: 12rem;
+    margin: 1rem;
 }
