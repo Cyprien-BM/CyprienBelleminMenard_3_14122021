@@ -1,8 +1,11 @@
 @import"./utils/variables.scss";
-@import"./utils/function";
+@import"./utils/mixin.scss";
+@import"./utils/function.scss";
 @import"./base/base.scss";
 @import"./component/button.scss";
 @import"./layouts/header.scss";
 @import"./layouts/footer.scss";
-@import"./layouts/img-section";
+@import"./layouts/img-section.scss";
+@import"./layouts/dish-card.scss";
 @import"./pages/index.scss";
+@import"./pages/la-palette-du-gout.scss";

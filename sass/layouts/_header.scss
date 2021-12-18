@@ -15,10 +15,7 @@
 
         &:hover {
             transform: scale(1.5);
-            background: rgb(74,74,158);
-            background: linear-gradient(201deg, rgba(74,74,158,1) 0%, rgba(147,86,220,1) 31%, rgba(255,121,218,1) 100%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            @include bg-color-for-effect;
         }
     }
 

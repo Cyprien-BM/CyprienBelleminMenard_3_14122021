@@ -37,7 +37,7 @@
 }
 
 .fonctionnement-section {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.5rem 3rem 2.15rem;
     row-gap: 1.5rem;
     
     h3 {
@@ -129,26 +129,7 @@
                 font-weight: 300;
             }
 
-            .full {
-                transition: opacity 250ms ease-in-out;
-                opacity: 0;
-            }
-
-            .empty {
-                transition: opacity 250ms ease-in-out;
-            }
-
-            .heart:hover .full {
-                opacity: 1;
-                background: rgb(74,74,158);
-                background: linear-gradient(201deg, rgba(74,74,158,1) 0%, rgba(147,86,220,1) 31%, rgba(255,121,218,1) 100%);
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-
-            .heart:hover .empty {
-                opacity: 0;
-            }
+            @include like-button;
         }
 
         .card__new-tag {

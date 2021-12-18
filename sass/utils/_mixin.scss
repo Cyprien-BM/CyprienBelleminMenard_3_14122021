@@ -1,0 +1,43 @@
+@mixin bg-footer-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: opacity 250ms linear;
+}
+
+@mixin clr-bg-footer-link {
+    background: light-clr(rgb(74,74,158),10);
+    background: linear-gradient(201deg, light-clr(rgba(74,74,158,1), 10) 0%, light-clr(rgba(147,86,220,1), 5) 31%, light-clr(rgba(255,121,218,1), 5) 100%);
+    background-clip: text;
+}
+
+@mixin bg-color-for-effect {
+    background: rgb(74,74,158);
+    background: linear-gradient(201deg, rgba(74,74,158,1) 0%, rgba(147,86,220,1) 31%, rgba(255,121,218,1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin like-button {
+    .full {
+        transition: opacity 250ms ease-in-out;
+        opacity: 0;
+    }
+
+    .empty {
+        transition: opacity 250ms ease-in-out;
+    }
+
+    .heart:hover .full {
+        opacity: 1;
+       @include bg-color-for-effect()
+    }
+
+    .heart:hover .empty {
+        opacity: 0;
+    }
+}

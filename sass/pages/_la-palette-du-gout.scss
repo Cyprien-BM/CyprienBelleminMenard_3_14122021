@@ -1,0 +1,25 @@
+.menu-section {
+
+    padding: 3rem 1.5rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: $color-bg-medium;
+    position: relative;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    header {
+
+        display: flex;
+        justify-content: space-between;
+        
+        h2 {
+            font-family: 'Shrikhand', cursive;
+            font-weight: lighter;
+        }
+
+        @include like-button;
+    }
+    
+}

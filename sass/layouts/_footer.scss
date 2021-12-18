@@ -1,23 +1,4 @@
-@mixin bg-footer-link {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-    transition: opacity 250ms linear;
-}
-
-@mixin clr-bg-footer-link {
-    background: light-clr(rgb(74,74,158),10);
-    background: linear-gradient(201deg, light-clr(rgba(74,74,158,1), 10) 0%, light-clr(rgba(147,86,220,1), 5) 31%, light-clr(rgba(255,121,218,1), 5) 100%);
-    background-clip: text;
-}
-
-
-
-$nlink: 5;
+$n-link: 5;
 
 footer {
     width: 100%;
@@ -35,7 +16,7 @@ footer {
             
             .link {
                 color: transparent;
-                @for $i from 2 through $nlink {
+                @for $i from 2 through $n-link {
                     &.n--#{$i} {
                         &::after {
                             opacity: 1;
