@@ -409,101 +409,129 @@ footer ul li span {
     transform: translateY(0);
   }
 }
+.hidden-index {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  animation: display-index 100ms 3000ms linear forwards;
+}
+
 .loading-section {
   width: 100vw;
   height: 100vh;
-  overflow: visible;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.loading-block {
+  background: #353535;
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
+  animation: display-loader 250ms 3000ms ease-in-out forwards;
 }
-
-.page-block.index {
+.loading-section span {
+  display: block;
+  font-family: "Shrikhand", cursive;
+  font-weight: lighter;
+  position: absolute;
+  margin: auto;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 10px black;
+  animation: color 850ms infinite linear alternate;
+}
+.loading-section span:nth-child(1) {
+  font-size: 0px;
+  opacity: 0.1;
+  animation-delay: 0ms;
+  color: #9356dc;
+  transform: rotateX(1deg) translateX(-50%) translateY(0%);
+}
+.loading-section span:nth-child(2) {
+  font-size: 7px;
+  opacity: 0.2;
+  animation-delay: 100ms;
+  color: #9356dc;
+  transform: rotateX(2deg) translateX(-50%) translateY(1%);
+}
+.loading-section span:nth-child(3) {
+  font-size: 14px;
+  opacity: 0.3;
+  animation-delay: 200ms;
+  color: #9356dc;
+  transform: rotateX(3deg) translateX(-50%) translateY(2%);
+}
+.loading-section span:nth-child(4) {
+  font-size: 21px;
+  opacity: 0.4;
+  animation-delay: 300ms;
+  color: #9356dc;
+  transform: rotateX(4deg) translateX(-50%) translateY(3%);
+}
+.loading-section span:nth-child(5) {
+  font-size: 28px;
+  opacity: 0.5;
+  animation-delay: 400ms;
+  color: #9356dc;
+  transform: rotateX(5deg) translateX(-50%) translateY(4%);
+}
+.loading-section span:nth-child(6) {
+  font-size: 35px;
+  opacity: 0.6;
+  animation-delay: 500ms;
+  color: #9356dc;
+  transform: rotateX(6deg) translateX(-50%) translateY(5%);
+}
+.loading-section span:nth-child(7) {
+  font-size: 42px;
+  opacity: 0.7;
+  animation-delay: 600ms;
+  color: #9356dc;
+  transform: rotateX(7deg) translateX(-50%) translateY(6%);
+}
+.loading-section span:nth-child(8) {
+  font-size: 49px;
+  opacity: 0.8;
+  animation-delay: 700ms;
+  color: #9356dc;
+  transform: rotateX(8deg) translateX(-50%) translateY(7%);
+}
+.loading-section span:nth-child(9) {
+  font-size: 56px;
+  opacity: 0.9;
+  animation-delay: 800ms;
+  color: #9356dc;
+  transform: rotateX(9deg) translateX(-50%) translateY(8%);
+}
+.loading-section span:nth-child(10) {
+  font-size: 63px;
   opacity: 1;
-  animation: loading 1000ms ease-in-out;
+  animation-delay: 900ms;
+  color: #9356dc;
+  transform: rotateX(10deg) translateX(-50%) translateY(9%);
 }
 
-.fall {
-  display: none;
-}
-.fall .letter {
-  animation: loading-fall 3000ms forwards ease-in-out;
-}
-.fall .letter.fall-n1 {
-  position: relative;
-  bottom: 100%;
-  opacity: 0;
-  animation-delay: 375ms;
-}
-.fall .letter.fall-n2 {
-  position: relative;
-  bottom: 100%;
-  opacity: 0;
-  animation-delay: 750ms;
-}
-.fall .letter.fall-n3 {
-  position: relative;
-  bottom: 100%;
-  opacity: 0;
-  animation-delay: 1125ms;
-}
-.fall .letter.fall-n4 {
-  position: relative;
-  bottom: 100%;
-  opacity: 0;
-  animation-delay: 1500ms;
-}
-.fall .letter.fall-n5 {
-  position: relative;
-  bottom: 100%;
-  opacity: 0;
-  animation-delay: 1875ms;
-}
-.fall .letter.fall-n6 {
-  position: relative;
-  bottom: 100%;
-  opacity: 0;
-  animation-delay: 2250ms;
-}
-.fall .letter.fall-n7 {
-  position: relative;
-  bottom: 100%;
-  opacity: 0;
-  animation-delay: 2625ms;
-}
-.fall .letter.fall-n8 {
-  position: relative;
-  bottom: 100%;
-  opacity: 0;
-  animation-delay: 3000ms;
-}
-
-@keyframes loading-fall {
+@keyframes color {
   33% {
-    opacity: 1;
-    top: calc(50vh - 10.5rem);
-  }
-  49% {
-    top: calc(50vh - 1.5rem);
+    color: #ff79da;
   }
   66% {
-    opacity: 1;
-    top: calc(50vh - 3.5rem);
+    color: #99e2d0;
   }
-  82% {
-    top: calc(50vh - 1.5rem);
+}
+@keyframes display-loader {
+  100% {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
+}
+@keyframes display-index {
+  10% {
+    opacity: 0;
   }
   100% {
-    opacity: 1;
-    top: calc(50vh - 3.5rem);
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
 }
 .nav-section {

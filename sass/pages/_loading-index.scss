@@ -1,82 +1,163 @@
+.hidden-index {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    animation: display-index 100ms 3000ms linear forwards;
+
+}
+
 .loading-section {
     width: 100vw;
     height: 100vh;
-    overflow: visible;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    
-    // span {
-    //     display: block;
-    //     font-family: 'Shrikhand', cursive;
-    //     font-size: 2.5rem;
-    //     padding: 0 .3rem;
-    //     font-weight: lighter;
-    // }
-}
-
-.loading-block {
+    background: $color-bg-dark;
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
-}
+    animation: display-loader 250ms 3000ms ease-in-out forwards;
 
-.page-block.index {
-    opacity: 1;
-    animation: loading 1000ms ease-in-out;
-}
-
-$fall-duration: 3000ms;
-$n-letter: 8;
-$fall-delay: $fall-duration / $n-letter;
-
-.fall{
-    display: none;
-    // display: flex;
-    .letter {
-
-        animation: loading-fall $fall-duration forwards ease-in-out;
-
-        @for $i from 1 through $n-letter {
-            
-                &.fall-n#{$i} {
-                    position: relative;
-                    bottom: 100%;
-                    opacity: 0;
-                    animation-delay: $fall-delay * $i;
-                }
+    span {
+        display: block;
+        font-family: 'Shrikhand', cursive;
+        font-weight: lighter;
+        position: absolute;
+        margin: auto;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 0 0 10px black;
+        animation: color 850ms infinite linear alternate;
+        
+        
+        
+        @for $i from 0 to 10 {
+            &:nth-child(#{$i + 1}) {
+                font-size: (7px * $i);
+                opacity: (0.1 +$i * 0.1);
+                animation-delay: 100ms * $i;
+                color: $color-primary;
+                transform: rotateX(1deg + $i) translateX(-50%) translateY(1% * $i);
+            }
         }
+
     }
 }
 
-@keyframes loading-fall {
-    0% {
+@keyframes color {
+    0%, 100% {
 
     }
 
     33% {
-        opacity: 1;
-        top: calc(50vh - 10.5rem);
-    }
-
-    49% {
-        top: calc(50vh - 1.5rem);
+        color: $color-secondary;
     }
 
     66% {
-        opacity: 1;
-        top: calc(50vh - 3.5rem);
-    }
-
-    82% {
-        top: calc(50vh - 1.5rem);
-    }
-
-    100% {
-        opacity: 1;
-        top: calc(50vh - 3.5rem);
+        color: $color-tertiary
     }
 }
 
+@keyframes display-loader {
+    0% {
+
+    }
+
+    100% {
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+    }
+
+}
+
+@keyframes display-index {
+    0% {
+
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+}
+
+
+
+
+// $nb-letter: 4;
+// $animation-duration: 1000ms;
+// $animation-delay: $animation-duration / $nb-letter;
+
+// .loading-section {
+//     width: 100vw;
+//     height: 100vh;
+//     background: $color-bg-dark;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     .loading-bg {
+//         height: 10rem;
+//         width: 100%;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         background-color: $color-primary;
+//         animation: bg-change $animation-duration ease-in-out infinite;
+//         background-clip: text;
+//         -webkit-text-fill-color: transparent;
+//     }
+
+//     span {
+//         display: block;
+//         font-family: 'Shrikhand', cursive;
+//         font-size: 2.8rem;
+//         padding: 0 .3rem;
+//         font-weight: lighter;
+//     }
+// }
+
+// $nb-letter: 8;
+// $animation-duration: 1000ms;
+// $animation-delay: $animation-duration / $nb-letter;
+
+// .letter {
+
+//     animation: pulse $animation-duration ease-in-out infinite alternate;
+
+//     @for $i from 1 through $nb-letter {
+//         &.n#{$i} {
+//             animation-delay: $animation-delay * $i;
+//         }
+//     }
+
+// }
+
+// @keyframes pulse {
+//     0%, 100% {
+//         opacity: 1;
+//         scale: 1;
+//     }
+
+//     45% {
+//         opacity: .5;
+//         scale: 1.8;
+//         transform:translateZ(1rem)
+//     }
+// }
+
+// @keyframes bg-change {
+//     0%, 100% {
+
+//     }
+
+//     40% {
+//        background-color: $color-secondary;
+//     }
+// }
