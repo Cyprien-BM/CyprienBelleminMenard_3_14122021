@@ -81,6 +81,22 @@
            width: calc(90% - 4rem);
         }
     }
+
+    @media all and (min-width: $desktop) {
+        min-width: 400px;
+
+        &__description {
+
+            h5 {
+                font-size: .9rem;
+            }
+
+            p {
+                font-size: .85rem;
+            }
+        }
+    }
+
 }
 
 $cards-dur: 1000ms;

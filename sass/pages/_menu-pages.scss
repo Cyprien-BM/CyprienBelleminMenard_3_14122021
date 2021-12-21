@@ -30,6 +30,23 @@
         row-gap: 1rem;
         padding-bottom: 1.5rem;
     }
+
+    @media all and (min-width: $desktop) {
+
+        .dish-section_wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+
+            .dish-section {
+                width: fit-content;
+            }
+        }
+        
+    }
+
 }
 
 .btn-pages {

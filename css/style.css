@@ -142,7 +142,6 @@ footer {
   padding: 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 footer h6 {
   display: inline-block;
@@ -290,6 +289,7 @@ footer ul li span {
 @media all and (min-width: 993px) {
   footer {
     text-align: center;
+    align-items: center;
   }
 }
 
@@ -297,12 +297,23 @@ footer ul li span {
   width: 100%;
   height: calc(40vh - 2rem);
 }
+@media all and (min-width: 993px) {
+  .img-section {
+    height: calc(50vh - 2rem);
+  }
+}
 .img-section img {
   width: 100%;
   height: 40vh;
   z-index: -1;
   object-fit: cover;
   position: absolute;
+}
+@media all and (min-width: 993px) {
+  .img-section img {
+    height: 50vh;
+    object-position: 55% 60%;
+  }
 }
 
 .dish-card {
@@ -374,6 +385,17 @@ footer ul li span {
 .dish-card:hover .dish-card__description {
   width: calc(90% - 4rem);
 }
+@media all and (min-width: 993px) {
+  .dish-card {
+    min-width: 400px;
+  }
+  .dish-card__description h5 {
+    font-size: 0.9rem;
+  }
+  .dish-card__description p {
+    font-size: 0.85rem;
+  }
+}
 
 .card-animation {
   opacity: 0;
@@ -430,10 +452,9 @@ footer ul li span {
   }
 }
 .hidden-index {
-  width: 0;
   height: 0;
   overflow: hidden;
-  animation: display-index 100ms 10ms linear forwards;
+  animation: display-index 100ms 3000ms linear forwards;
 }
 
 .loading-section {
@@ -443,7 +464,7 @@ footer ul li span {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: display-loader 250ms 10ms ease-in-out forwards;
+  animation: hide-loader 800ms 3000ms cubic-bezier(0.66, 0.1, 0.71, 1.01) forwards;
 }
 .loading-section span {
   display: block;
@@ -464,12 +485,22 @@ footer ul li span {
   color: #9356dc;
   transform: rotateX(1deg) translateX(-50%) translateY(0%);
 }
+@media all and (min-width: 993px) {
+  .loading-section span:nth-child(1) {
+    font-size: 0px;
+  }
+}
 .loading-section span:nth-child(2) {
   font-size: 7px;
   opacity: 0.2;
   animation-delay: 100ms;
   color: #9356dc;
   transform: rotateX(2deg) translateX(-50%) translateY(1%);
+}
+@media all and (min-width: 993px) {
+  .loading-section span:nth-child(2) {
+    font-size: 20px;
+  }
 }
 .loading-section span:nth-child(3) {
   font-size: 14px;
@@ -478,12 +509,22 @@ footer ul li span {
   color: #9356dc;
   transform: rotateX(3deg) translateX(-50%) translateY(2%);
 }
+@media all and (min-width: 993px) {
+  .loading-section span:nth-child(3) {
+    font-size: 40px;
+  }
+}
 .loading-section span:nth-child(4) {
   font-size: 21px;
   opacity: 0.4;
   animation-delay: 300ms;
   color: #9356dc;
   transform: rotateX(4deg) translateX(-50%) translateY(3%);
+}
+@media all and (min-width: 993px) {
+  .loading-section span:nth-child(4) {
+    font-size: 60px;
+  }
 }
 .loading-section span:nth-child(5) {
   font-size: 28px;
@@ -492,12 +533,22 @@ footer ul li span {
   color: #9356dc;
   transform: rotateX(5deg) translateX(-50%) translateY(4%);
 }
+@media all and (min-width: 993px) {
+  .loading-section span:nth-child(5) {
+    font-size: 80px;
+  }
+}
 .loading-section span:nth-child(6) {
   font-size: 35px;
   opacity: 0.6;
   animation-delay: 500ms;
   color: #9356dc;
   transform: rotateX(6deg) translateX(-50%) translateY(5%);
+}
+@media all and (min-width: 993px) {
+  .loading-section span:nth-child(6) {
+    font-size: 100px;
+  }
 }
 .loading-section span:nth-child(7) {
   font-size: 42px;
@@ -506,12 +557,22 @@ footer ul li span {
   color: #9356dc;
   transform: rotateX(7deg) translateX(-50%) translateY(6%);
 }
+@media all and (min-width: 993px) {
+  .loading-section span:nth-child(7) {
+    font-size: 120px;
+  }
+}
 .loading-section span:nth-child(8) {
   font-size: 49px;
   opacity: 0.8;
   animation-delay: 700ms;
   color: #9356dc;
   transform: rotateX(8deg) translateX(-50%) translateY(7%);
+}
+@media all and (min-width: 993px) {
+  .loading-section span:nth-child(8) {
+    font-size: 140px;
+  }
 }
 .loading-section span:nth-child(9) {
   font-size: 56px;
@@ -520,12 +581,22 @@ footer ul li span {
   color: #9356dc;
   transform: rotateX(9deg) translateX(-50%) translateY(8%);
 }
+@media all and (min-width: 993px) {
+  .loading-section span:nth-child(9) {
+    font-size: 160px;
+  }
+}
 .loading-section span:nth-child(10) {
   font-size: 63px;
   opacity: 1;
   animation-delay: 900ms;
   color: #9356dc;
   transform: rotateX(10deg) translateX(-50%) translateY(9%);
+}
+@media all and (min-width: 993px) {
+  .loading-section span:nth-child(10) {
+    font-size: 180px;
+  }
 }
 
 @keyframes color {
@@ -536,20 +607,20 @@ footer ul li span {
     color: #99e2d0;
   }
 }
-@keyframes display-loader {
+@keyframes hide-loader {
+  50% {
+    opacity: 0;
+  }
   100% {
     visibility: hidden;
     height: 0;
+    opacity: 0;
     overflow: hidden;
   }
 }
 @keyframes display-index {
-  10% {
-    opacity: 0;
-  }
   100% {
     visibility: visible;
-    width: 100%;
     height: 100%;
     overflow: hidden;
   }
@@ -653,6 +724,9 @@ footer ul li span {
   .fonctionnement-section {
     padding: 3rem 10rem 3rem 10.65rem;
   }
+  .fonctionnement-section > header {
+    text-align: center;
+  }
   .fonctionnement-section > div {
     flex-direction: row;
     justify-content: center;
@@ -669,6 +743,9 @@ footer ul li span {
 @media all and (min-width: 993px) {
   .restaurants-section {
     padding: 3rem 10rem;
+  }
+  .restaurants-section > header {
+    text-align: center;
   }
 }
 .restaurants-section > div {
@@ -800,6 +877,18 @@ footer ul li span {
   justify-content: center;
   row-gap: 1rem;
   padding-bottom: 1.5rem;
+}
+@media all and (min-width: 993px) {
+  .menu-section .dish-section_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .menu-section .dish-section_wrapper .dish-section {
+    width: fit-content;
+  }
 }
 
 .btn-pages {
