@@ -21,11 +21,15 @@
     font-weight: lighter;
     position: absolute;
     margin: auto;
-    top: 30%;
+    top: 40vh;
     left: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 0 0 10px black;
     animation: color 850ms infinite linear alternate;
+
+    @media all and (min-width: $desktop) {
+      top: 30vh;
+    }
 
     @for $i from 0 to 10 {
       &:nth-child(#{$i + 1}) {

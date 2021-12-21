@@ -148,9 +148,18 @@
   }
 
   article {
+    position: relative;
     width: 100%;
     max-width: $tablet-max;
+    transition: transform 250ms ease-in-out;
     z-index: 1;
+
+    @include like-button-index;
+    @include like-button;
+    
+    &:hover {
+      transform: scale(1.03);
+    }
 
     @media all and (min-width: $desktop) {
       max-width: 45%;
@@ -163,12 +172,7 @@
     border-radius: 1rem;
     position: relative;
     box-shadow: 0 0.5rem 0.5rem $color-shadow;
-    transition: transform 250ms ease-in-out;
     z-index: 1;
-
-    &:hover {
-      transform: scale(1.03);
-    }
 
     img {
       width: 100%;
@@ -193,7 +197,7 @@
         font-weight: 300;
       }
 
-      @include like-button;
+      
     }
 
     .card__new-tag {

@@ -478,11 +478,16 @@ footer ul li span {
   font-weight: lighter;
   position: absolute;
   margin: auto;
-  top: 30%;
+  top: 40vh;
   left: 50%;
   transform: translate(-50%, -50%);
   text-shadow: 0 0 10px black;
   animation: color 850ms infinite linear alternate;
+}
+@media all and (min-width: 993px) {
+  .loading-section span {
+    top: 30vh;
+  }
 }
 .loading-section span:nth-child(1) {
   font-size: 0px;
@@ -769,9 +774,40 @@ footer ul li span {
   }
 }
 .restaurants-section article {
+  position: relative;
   width: 100%;
   max-width: 992px;
+  transition: transform 250ms ease-in-out;
   z-index: 1;
+}
+.restaurants-section article .like {
+  display: block;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  z-index: 2;
+}
+.restaurants-section article .full {
+  transition: opacity 250ms ease-in-out;
+  opacity: 0;
+  position: absolute;
+}
+.restaurants-section article .empty {
+  transition: opacity 250ms ease-in-out;
+  position: absolute;
+}
+.restaurants-section article .heart:hover .full {
+  opacity: 1;
+  background: #4a4a9e;
+  background: linear-gradient(201deg, #4a4a9e 0%, #9356dc 31%, #ff79da 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants-section article .heart:hover .empty {
+  opacity: 0;
+}
+.restaurants-section article:hover {
+  transform: scale(1.03);
 }
 @media all and (min-width: 993px) {
   .restaurants-section article {
@@ -784,11 +820,7 @@ footer ul li span {
   border-radius: 1rem;
   position: relative;
   box-shadow: 0 0.5rem 0.5rem #bdbdbd;
-  transition: transform 250ms ease-in-out;
   z-index: 1;
-}
-.restaurants-section a:hover {
-  transform: scale(1.03);
 }
 .restaurants-section a img {
   width: 100%;
@@ -811,30 +843,6 @@ footer ul li span {
 }
 .restaurants-section a figcaption p {
   font-weight: 300;
-}
-.restaurants-section a figcaption span {
-  display: block;
-  position: relative;
-  z-index: 2;
-}
-.restaurants-section a figcaption .full {
-  transition: opacity 250ms ease-in-out;
-  opacity: 0;
-  position: absolute;
-}
-.restaurants-section a figcaption .empty {
-  transition: opacity 250ms ease-in-out;
-  position: absolute;
-}
-.restaurants-section a figcaption .heart:hover .full {
-  opacity: 1;
-  background: #4a4a9e;
-  background: linear-gradient(201deg, #4a4a9e 0%, #9356dc 31%, #ff79da 100%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants-section a figcaption .heart:hover .empty {
-  opacity: 0;
 }
 .restaurants-section a .card__new-tag {
   display: inline-block;
@@ -871,7 +879,6 @@ footer ul li span {
 .menu-section header span {
   display: block;
   position: relative;
-  z-index: 2;
 }
 .menu-section header .full {
   transition: opacity 250ms ease-in-out;

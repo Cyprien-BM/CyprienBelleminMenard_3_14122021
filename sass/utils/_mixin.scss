@@ -32,13 +32,25 @@
   -webkit-text-fill-color: transparent;
 }
 
-@mixin like-button {
-  span {
+@mixin like-button-index {
+  .like {
     display: block;
-    position: relative;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
     z-index: 2;
   }
+}
 
+@mixin like-button-pages {
+  span {
+    display: block;
+  position: relative;
+  }
+}
+
+@mixin like-button {
+  
   .full {
     transition: opacity 250ms ease-in-out;
     opacity: 0;

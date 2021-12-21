@@ -18,6 +18,7 @@
       font-weight: lighter;
     }
 
+    @include like-button-pages;
     @include like-button;
   }
 
