@@ -1,55 +1,51 @@
 .menu-section {
+  padding: 2rem 1.5rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: $color-bg-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    padding: 2rem 1.5rem;
-    border-radius: 2rem 2rem 0 0;
-    background-color: $color-bg-light;
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+
+    h2 {
+      font-family: "Shrikhand", cursive;
+      font-weight: lighter;
+    }
+
+    @include like-button;
+  }
+
+  .dish-section {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
-    header {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 2rem;
-        
-        h2 {
-            font-family: 'Shrikhand', cursive;
-            font-weight: lighter;
-        }
+    row-gap: 1rem;
+    padding-bottom: 1.5rem;
+  }
 
-        @include like-button;
+  @media all and (min-width: $desktop) {
+    .dish-section_wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      .dish-section {
+        width: fit-content;
+      }
     }
-    
-    .dish-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        row-gap: 1rem;
-        padding-bottom: 1.5rem;
-    }
-
-    @media all and (min-width: $desktop) {
-
-        .dish-section_wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-
-            .dish-section {
-                width: fit-content;
-            }
-        }
-        
-    }
-
+  }
 }
 
 .btn-pages {
-    width: 12rem;
-    margin: 1rem;
+  width: 12rem;
+  margin: 1rem;
 }

@@ -10,13 +10,11 @@ $color-bg-fonctionnement-hover: #f5edff;
 $color-shadow: #bdbdbd;
 $color-logo-card: #7e7e7e;
 
-
 // CUBIC BEZIER
 
-$cubic-dish-card: cubic-bezier(.78,.13,.33,.87);
+$cubic-dish-card: cubic-bezier(0.78, 0.13, 0.33, 0.87);
 
-
-// BREAKPOINT 
+// BREAKPOINT
 
 $mobile: 767px;
 $tablet-min: 768px;

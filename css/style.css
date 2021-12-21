@@ -196,9 +196,14 @@ footer .link.n--1::after {
   background: #6464b7;
   background: linear-gradient(201deg, #6464b7 0%, #a16be0 31%, #ff93e1 100%);
   background-clip: text;
-  left: -3px;
   width: 120px;
-  text-align: center;
+}
+@media all and (min-width: 993px) {
+  footer .link.n--1::after {
+    left: -3px;
+    width: 120px;
+    text-align: center;
+  }
 }
 footer .link.n--1:hover {
   color: transparent;
@@ -452,13 +457,14 @@ footer ul li span {
   }
 }
 .hidden-index {
+  width: 100%;
   height: 0;
   overflow: hidden;
   animation: display-index 100ms 3000ms linear forwards;
 }
 
 .loading-section {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: #353535;
   display: flex;
@@ -472,7 +478,7 @@ footer ul li span {
   font-weight: lighter;
   position: absolute;
   margin: auto;
-  top: 45%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-shadow: 0 0 10px black;
@@ -765,6 +771,7 @@ footer ul li span {
 .restaurants-section article {
   width: 100%;
   max-width: 992px;
+  z-index: 1;
 }
 @media all and (min-width: 993px) {
   .restaurants-section article {
@@ -778,6 +785,7 @@ footer ul li span {
   position: relative;
   box-shadow: 0 0.5rem 0.5rem #bdbdbd;
   transition: transform 250ms ease-in-out;
+  z-index: 1;
 }
 .restaurants-section a:hover {
   transform: scale(1.03);
@@ -804,12 +812,19 @@ footer ul li span {
 .restaurants-section a figcaption p {
   font-weight: 300;
 }
+.restaurants-section a figcaption span {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
 .restaurants-section a figcaption .full {
   transition: opacity 250ms ease-in-out;
   opacity: 0;
+  position: absolute;
 }
 .restaurants-section a figcaption .empty {
   transition: opacity 250ms ease-in-out;
+  position: absolute;
 }
 .restaurants-section a figcaption .heart:hover .full {
   opacity: 1;
@@ -853,12 +868,19 @@ footer ul li span {
   font-family: "Shrikhand", cursive;
   font-weight: lighter;
 }
+.menu-section header span {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
 .menu-section header .full {
   transition: opacity 250ms ease-in-out;
   opacity: 0;
+  position: absolute;
 }
 .menu-section header .empty {
   transition: opacity 250ms ease-in-out;
+  position: absolute;
 }
 .menu-section header .heart:hover .full {
   opacity: 1;
