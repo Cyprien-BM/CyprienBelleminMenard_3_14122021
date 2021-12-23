@@ -325,8 +325,8 @@ footer ul li span {
   height: 3.5rem;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0.7rem 1rem 0.7rem 0.5rem;
   background-color: white;
   border-radius: 1rem;
@@ -863,8 +863,8 @@ footer ul li span {
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 .menu-section header {
   width: 100%;

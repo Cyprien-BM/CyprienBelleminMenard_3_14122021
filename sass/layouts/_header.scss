@@ -1,9 +1,7 @@
 .header-block {
   width: 100%;
   box-shadow: 0px 2px 2px $color-shadow;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center-center;
   text-align: center;
   z-index: 1;
   position: relative;

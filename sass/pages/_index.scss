@@ -4,9 +4,7 @@
 }
 
 .localisation-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center-center;
   width: 100%;
   height: 3rem;
   background-color: $color-bg-medium;
@@ -134,9 +132,7 @@
   }
 
   > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center;
     row-gap: 1.5rem;
 
     @media all and (min-width: $desktop) {
@@ -189,9 +185,7 @@
 
     figcaption {
       padding: 0.7rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      @include flex-spaceBeetween-center;
 
       p {
         font-weight: 300;

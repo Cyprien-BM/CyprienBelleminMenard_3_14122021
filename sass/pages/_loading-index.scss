@@ -9,11 +9,8 @@
   width: 100%;
   height: 100vh;
   background: $color-bg-dark;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: hide-loader 800ms 3000ms cubic-bezier(0.66, 0.1, 0.71, 1.01)
-    forwards;
+  @include flex-center-center;
+  animation: hide-loader 800ms 3000ms cubic-bezier(0.66, 0.1, 0.71, 1.01) forwards;
 
   span {
     display: block;
@@ -87,75 +84,3 @@
     overflow: hidden;
   }
 }
-
-// $nb-letter: 4;
-// $animation-duration: 1000ms;
-// $animation-delay: $animation-duration / $nb-letter;
-
-// .loading-section {
-//     width: 100vw;
-//     height: 100vh;
-//     background: $color-bg-dark;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-
-//     .loading-bg {
-//         height: 10rem;
-//         width: 100%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         background-color: $color-primary;
-//         animation: bg-change $animation-duration ease-in-out infinite;
-//         background-clip: text;
-//         -webkit-text-fill-color: transparent;
-//     }
-
-//     span {
-//         display: block;
-//         font-family: 'Shrikhand', cursive;
-//         font-size: 2.8rem;
-//         padding: 0 .3rem;
-//         font-weight: lighter;
-//     }
-// }
-
-// $nb-letter: 8;
-// $animation-duration: 1000ms;
-// $animation-delay: $animation-duration / $nb-letter;
-
-// .letter {
-
-//     animation: pulse $animation-duration ease-in-out infinite alternate;
-
-//     @for $i from 1 through $nb-letter {
-//         &.n#{$i} {
-//             animation-delay: $animation-delay * $i;
-//         }
-//     }
-
-// }
-
-// @keyframes pulse {
-//     0%, 100% {
-//         opacity: 1;
-//         scale: 1;
-//     }
-
-//     45% {
-//         opacity: .5;
-//         scale: 1.8;
-//         transform:translateZ(1rem)
-//     }
-// }
-
-// @keyframes bg-change {
-//     0%, 100% {
-
-//     }
-
-//     40% {
-//        background-color: $color-secondary;
-//     }
-// }

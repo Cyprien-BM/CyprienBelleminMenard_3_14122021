@@ -16,9 +16,7 @@ html {
 }
 
 .page-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-column-center;
 }
 
 section {

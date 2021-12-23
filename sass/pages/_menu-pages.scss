@@ -2,10 +2,9 @@
   padding: 2rem 1.5rem;
   border-radius: 2rem 2rem 0 0;
   background-color: $color-bg-light;
-  display: flex;
-  flex-direction: column;
+  @include flex-column-center;
   justify-content: center;
-  align-items: center;
+
 
   header {
     width: 100%;

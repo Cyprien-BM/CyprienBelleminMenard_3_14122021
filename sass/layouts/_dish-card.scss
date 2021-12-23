@@ -1,9 +1,7 @@
 .dish-card {
   height: 3.5rem;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-spaceBeetween-center;
   padding: 0.7rem 1rem 0.7rem 0.5rem;
   background-color: white;
   border-radius: 1rem;
@@ -15,9 +13,7 @@
     font-weight: 700;
     font-size: 1rem;
     padding-bottom: 0.3rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    @include text-overflow;
   }
 
   &__description {
@@ -28,9 +24,7 @@
     p {
       font-weight: 300;
       font-size: 0.9rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      @include text-overflow;
     }
   }
 
@@ -46,9 +40,7 @@
     height: 3.5rem;
     width: 4rem;
     background-color: $color-tertiary;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center-center;
     color: white;
     position: absolute;
     left: 100%;
