@@ -45,32 +45,39 @@
 @mixin like-button-pages {
   span {
     display: block;
-  position: relative;
+    position: relative;
   }
 }
 
 @mixin like-button {
   
-  .full {
-    transition: opacity 250ms ease-in-out;
-    opacity: 0;
-    position: absolute;
-  }
-
   .empty {
-    transition: opacity 250ms ease-in-out;
-    position: absolute;
-  }
-
-  .heart:hover .full {
-    opacity: 1;
-    @include bg-color-for-effect();
+     position: absolute;
   }
 
   .heart:hover .empty {
-    opacity: 0;
+    animation: full 350ms ease-in-out forwards alternate;
+  }
+
+  @keyframes full {
+    0% {
+
+    }
+
+    30% {
+      opacity: 0;
+    }
+
+    100% {
+      font-weight: 900;
+      opacity: 1;
+      @include bg-color-for-effect();
+    }
   }
 }
+
+// MIXIN FLEXBOX
+
 
 @mixin flex-column-center {
   display: flex;

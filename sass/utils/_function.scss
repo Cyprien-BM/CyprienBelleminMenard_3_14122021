@@ -2,8 +2,3 @@
   $clr: lighten($clr, $percent);
   @return $clr;
 }
-
-@function dark-clr($clr, $percent) {
-  $clr: darken($clr, $percent);
-  @return $clr;
-}
