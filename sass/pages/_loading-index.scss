@@ -10,7 +10,7 @@
   height: 100vh;
   background: $color-bg-dark;
   @include flex-center-center;
-  animation: hide-loader 800ms 3000ms cubic-bezier(0.66, 0.1, 0.71, 1.01) forwards;
+  animation: hidde-loader 800ms 3000ms cubic-bezier(0.66, 0.1, 0.71, 1.01) forwards;
 
   span {
     display: block;
@@ -30,15 +30,12 @@
 
     @for $i from 0 to 10 {
       &:nth-child(#{$i + 1}) {
-        font-size: (7px * $i);
+        font-size: (1.5vw * ($i + 0.1));
         opacity: (0.1 + $i * 0.1);
         animation-delay: 100ms * $i;
         color: $color-primary;
         transform: rotateX(1deg + $i) translateX(-50%) translateY(1% * $i);
-
-        @media all and (min-width: $desktop) {
-          font-size: (20px * $i);
-        }
+        z-index: $i + 1;
       }
     }
   }
@@ -58,7 +55,7 @@
   }
 }
 
-@keyframes hide-loader {
+@keyframes hidde-loader {
   0% {
   }
 
@@ -67,10 +64,11 @@
   }
 
   100% {
-    visibility: hidden;
+    // visibility: hidden;
     height: 0;
     opacity: 0;
-    overflow: hidden;
+    // overflow: hidden;
+    display: none;
   }
 }
 
