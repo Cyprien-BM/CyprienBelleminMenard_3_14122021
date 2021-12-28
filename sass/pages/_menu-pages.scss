@@ -1,4 +1,4 @@
-.menu-section {
+.menu {
   padding: 2rem 1.5rem;
   border-radius: 2rem 2rem 0 0;
   background-color: $color-bg-light;
@@ -31,10 +31,11 @@
   }
 
   @media all and (min-width: $desktop) {
-    .dish-section_wrapper {
+    .dish-section__container {
       width: 100%;
       display: flex;
       justify-content: center;
+      align-items: flex-start;
       flex-wrap: wrap;
       gap: 2rem;
 

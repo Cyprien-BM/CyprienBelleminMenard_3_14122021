@@ -21,7 +21,7 @@
   }
 }
 
-.nav-block-index {
+.nav-section__content {
   width: 100%;
   padding: 3rem;
   background-color: $color-bg-light;
@@ -37,7 +37,7 @@
   }
 }
 
-.fonctionnement-section {
+.fonctionnement {
   padding: 3rem 1.5rem 3rem 2.15rem;
   row-gap: 1.5rem;
 
@@ -118,7 +118,7 @@
   }
 }
 
-.restaurants-section {
+.restaurants {
   padding: 3rem 1.5rem;
   background-color: $color-bg-light;
   row-gap: 1.5rem;
@@ -143,7 +143,7 @@
     }
   }
 
-  article {
+  &__card {
     position: relative;
     width: 100%;
     max-width: $tablet-max;

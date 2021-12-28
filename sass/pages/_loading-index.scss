@@ -5,7 +5,7 @@
   animation: display-index 100ms 3000ms linear forwards;
 }
 
-.loading-section {
+.loader {
   width: 100%;
   height: 100vh;
   background: $color-bg-dark;
@@ -23,6 +23,9 @@
     transform: translate(-50%, -50%);
     text-shadow: 0 0 10px black;
     animation: color 850ms infinite linear alternate;
+    &:nth-child(1) {
+      visibility: hidden;
+    }
 
     @media all and (min-width: $desktop) {
       top: 30vh;
@@ -64,11 +67,10 @@
   }
 
   100% {
-    // visibility: hidden;
+    visibility: hidden;
     height: 0;
     opacity: 0;
-    // overflow: hidden;
-    display: none;
+    overflow: hidden;
   }
 }
 
