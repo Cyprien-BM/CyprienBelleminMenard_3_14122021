@@ -53,7 +53,21 @@
     }
   }
 
-  // VALIDATION ANIMATION
+  @media all and (min-width: $desktop) {
+    min-width: 400px;
+
+    &__description {
+      h5 {
+        font-size: 0.9rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  // VALIDATION ANIMATION 
 
   &:hover {
     .dish-card__validation {
@@ -73,27 +87,13 @@
       width: calc(90% - 4rem);
     }
   }
-
-  @media all and (min-width: $desktop) {
-    min-width: 400px;
-
-    &__description {
-      h5 {
-        font-size: 0.9rem;
-      }
-
-      p {
-        font-size: 0.85rem;
-      }
-    }
-  }
 }
+
+// LOADING ANIMATION
 
 $cards-dur: 1000ms;
 $cards-n: 13;
 $cards-delay: calc($cards-dur / $cards-n);
-
-// LOADING ANIMATION
 
 .card-animation {
   opacity: 0;

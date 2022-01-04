@@ -22,7 +22,7 @@ html {
   align-items: center;
 }
 
-section {
+section, nav {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -377,6 +377,17 @@ footer ul li span {
   opacity: 0;
   transition: transform 500ms 150ms cubic-bezier(0.51, 0.3, 0.11, 0.96), opacity 300ms 100ms ease-in-out;
 }
+@media all and (min-width: 993px) {
+  .dish-card {
+    min-width: 400px;
+  }
+  .dish-card__description h5 {
+    font-size: 0.9rem;
+  }
+  .dish-card__description p {
+    font-size: 0.85rem;
+  }
+}
 .dish-card:hover .dish-card__validation {
   transform: translateX(-4rem);
 }
@@ -389,17 +400,6 @@ footer ul li span {
 }
 .dish-card:hover .dish-card__description {
   width: calc(90% - 4rem);
-}
-@media all and (min-width: 993px) {
-  .dish-card {
-    min-width: 400px;
-  }
-  .dish-card__description h5 {
-    font-size: 0.9rem;
-  }
-  .dish-card__description p {
-    font-size: 0.85rem;
-  }
 }
 
 .card-animation {
