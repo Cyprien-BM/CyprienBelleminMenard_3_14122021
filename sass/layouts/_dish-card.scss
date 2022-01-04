@@ -53,6 +53,8 @@
     }
   }
 
+  // VALIDATION ANIMATION
+
   &:hover {
     .dish-card__validation {
       transform: translateX(-4rem);
@@ -90,6 +92,8 @@
 $cards-dur: 1000ms;
 $cards-n: 13;
 $cards-delay: calc($cards-dur / $cards-n);
+
+// LOADING ANIMATION
 
 .card-animation {
   opacity: 0;
