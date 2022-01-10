@@ -56,9 +56,9 @@
 }
 
 @mixin like-button {
-  
+
   .empty {
-     position: absolute;
+    position: absolute;
   }
 
   .heart:hover .empty {
@@ -75,15 +75,14 @@
     }
 
     100% {
+      @include bg-color-for-logo;
       font-weight: 900;
       opacity: 1;
-      @include bg-color-for-logo();
     }
   }
 }
 
 // MIXIN FLEXBOX
-
 
 @mixin flex-column-center {
   display: flex;
@@ -102,7 +101,6 @@
   align-items: center;
   justify-content: space-between;
 }
-
 
 // OVERFLOW DISHCARDS
 
