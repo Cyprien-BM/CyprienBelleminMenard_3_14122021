@@ -19,7 +19,7 @@ html {
   @include flex-column-center;
 }
 
-section, nav {
+main, section, nav {
   display: flex;
   flex-direction: column;
   width: 100%;
